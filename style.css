@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+
+justify-content: center;
+align-items: center;
+}
+
+.box{display: flex;
+gap: 2%;
+flex-wrap: wrap;
+width: 100%;
+justify-content: center;
+
+}
+
+.box .boxes{width: 18em;height: 26em;
+    border-radius: 6px;
+    overflow: hidden;
+box-shadow: 0px 6px 12px 2px #000000;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 2%;
+position: relative;
+margin: 20px 4px;
+}
+
+.box .boxes::before{
+    content: '';
+    z-index:-1 ;
+    width: 6em;
+    border-radius: 0 0 100%;
+    height: 6em;
+    background-color: #149e9e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.4s}
+
+.box .boxes:hover::before{width: 100%;height: 100%;
+    border-radius: 0 0 0%;
+}
+
+
+.box .boxes:hover h2,
+.box .boxes:hover p,
+.box .boxes:hover h3,
+.box .boxes:hover h3 span{color: white;}
+.box .boxes:hover .icons i{color: #000000;}
+.box .boxes:hover {box-shadow: 0px 6px 12px 2px #001aff;}
+.box .boxes:hover .img-box{ border: 3px solid white;}
+.box .boxes p{margin:0px 10px;
+    font-size: 1em;
+    text-align: center;color: rgb(135, 136, 138);}
+.box .boxes h2{color: #149e9e;margin-top: 3em;
+font-size: 1.5em;
+}
+.boxes #qote{font-size: 3.6em;
+    
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    color: white;
+    }
+.boxes .qote img{
+    
+    width: 100%;height: 100%;color: white;}
+.box .boxes .img-box {width: 6em;
+    border-radius: 50%;
+    border: 3px solid #149e9e;
+    height: 6em;
+    
+}
+.box .boxes .img-box img{
+    border-radius: 50%;
+    object-fit: fill;
+    
+    
+    width: 100%;height: 100%;}
+
+
+
+
+    .box .boxes h3{font-family: Georgia;
+        font-weight: 600;
+        font-size:1.8em;
+        color: #149e9e;
+    text-align: center;}
+
+        .box .boxes h3 span{color: gray;
+        font-size: 0.8em;}
+
+
+
+
+      .boxes .icons i{font-size: 1.6em;}
+      .boxes .icons i:first-child{color: rgb(50, 66, 244);}
+      .boxes .icons i:nth-child(2){color: green;}
+      .boxes .icons i:nth-child(3){color: rgb(0, 162, 255);}
